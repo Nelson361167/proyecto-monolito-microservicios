@@ -7,7 +7,7 @@ res.json({ estado: 'ok', servicio: 'productos' });
 });
 app.get('/productos', async (req, res) => {
 try {
-const result = await pool.query('SELECT * FROM products');
+const result = await pool.query('SELECT * FROM productos');
 res.json(result.rows);
 } catch (error) {
 console.error(error);
