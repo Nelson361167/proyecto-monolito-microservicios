@@ -107,7 +107,7 @@ app.delete('/usuarios/:id', async (req, res) => {
 // 4. Rutas de productos y pedidos
 app.get('/productos', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM productos');
+    const result = await pool.query('SELECT * FROM products');
     res.json(result.rows);
   } catch (error) {
     console.error(error);
