@@ -30,7 +30,7 @@ app.get('/db-test', async (req, res) => {
 // 3. Rutas de usuarios
 app.get('/usuarios', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM usuarios');
+    const result = await pool.query('SELECT * FROM usuaris');
     res.json(result.rows);
   } catch (error) {
     console.error(error);
